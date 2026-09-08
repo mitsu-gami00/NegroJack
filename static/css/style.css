@@ -160,3 +160,94 @@ footer{
     }
 }
 
+.doblar{
+    background:#ff9800;
+    color:white;
+}
+
+.dividir{
+    background:#9c27b0;
+    color:white;
+}
+
+
+/* GAME OVER */
+
+.game-over{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,0.85);
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    z-index:999;
+}
+
+.game-over.activo{
+    display:flex;
+}
+
+.game-over-contenido{
+    background:linear-gradient(
+        to bottom,
+        #240000,
+        #090000
+    );
+
+    padding:50px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 0 40px rgba(255,0,0,0.5);
+
+    width:90%;
+    max-width:500px;
+
+    animation:gameOverEntrada 0.5s ease;
+}
+
+.game-over-contenido h1{
+    font-size:45px;
+    margin-bottom:20px;
+}
+
+.game-over-contenido p{
+    font-size:20px;
+    margin:10px 0;
+}
+
+.game-over-contenido button{
+    margin-top:25px;
+
+    background:#1e90ff;
+    color:white;
+}
+
+@keyframes gameOverEntrada{
+
+    from{
+        opacity:0;
+        transform:scale(0.7);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
+}
+
+
+/* MANOS DEL SPLIT */
+
+.mano-activa{
+    border:3px solid gold;
+    border-radius:15px;
+    padding:10px;
+}
